@@ -22,8 +22,12 @@ module.exports = function () {
 	_createClass(_class, [{
 		key: 'bind',
 		value: function bind(element, callback) {
+			var autoUnbind = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
 			this.el = element;
 			this.callback = callback;
+			this.autoUnbind = autoUnbind;
+
 			this.onClick = this.onClick.bind(this);
 
 			window.addEventListener('click', this.onClick, true);
@@ -41,6 +45,10 @@ module.exports = function () {
 				// registered click outside the target element, run the callback!
 				if (typeof this.callback === 'function') {
 					this.callback();
+
+					if (this.autoUnbind) {
+						this.unbind();
+					}
 				} else {
 					throw 'Expected "callback" to be a function, instead got ' + _typeof(this.callback);
 				}
