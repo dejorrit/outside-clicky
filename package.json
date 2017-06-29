@@ -1,6 +1,6 @@
 {
   "name": "outside-clicky",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Listen for clicks outside of an element",
   "main": "dist/index.min.js",
   "scripts": {
