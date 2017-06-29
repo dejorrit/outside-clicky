@@ -12,7 +12,7 @@ npm install outside-clicky --save
 
 ### Basic usage
 
-### Initializing OutSideClicky
+### Initializing OutsideClicky
 
 ```javascript
 const OutsideClicky = require('outside-clicky');
