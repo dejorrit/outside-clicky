@@ -1,4 +1,4 @@
-# Outside Clicky
+# OutsideClicky
 
 Listen for clicks outside of an element
 
@@ -10,18 +10,21 @@ npm install outside-clicky --save
     
 ## Usage
 
-### Basic usage
-
 ### Initializing OutsideClicky
 
 ```javascript
+// Require OutsideClicky
 const OutsideClicky = require('outside-clicky');
     
+// Get the target element 
 let myDiv = document.querySelector('.js-myDiv');
+    
+// Create a callback function that runs when you click outside of your target element
 let myCallbackFunction = function () {
 	console.log('You clicked outside myDiv');
 };
     
+// Initialize OutsideClicky
 let myOC = new OutsideClicky();
 ```
 
